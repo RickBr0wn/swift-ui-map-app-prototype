@@ -13,6 +13,8 @@
 		1177D5AE2773DDEC00A93281 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5AD2773DDEC00A93281 /* LocationsDataService.swift */; };
 		1177D5B02773DDFB00A93281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177D5AF2773DDFB00A93281 /* Assets.xcassets */; };
 		1177D5B52773DEA200A93281 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5B42773DEA200A93281 /* Location.swift */; };
+		1177D5B82773E1EB00A93281 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5B72773E1EB00A93281 /* LocationViewModel.swift */; };
+		1177D5BA2773E2F000A93281 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5B92773E2F000A93281 /* LocationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		1177D5AD2773DDEC00A93281 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		1177D5AF2773DDFB00A93281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1177D5B42773DEA200A93281 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		1177D5B72773E1EB00A93281 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		1177D5B92773E2F000A93281 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		1177D5B12773DE6700A93281 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1177D5B92773E2F000A93281 /* LocationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 		1177D5B22773DE7200A93281 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1177D5B72773E1EB00A93281 /* LocationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				1177D5A22773DDCF00A93281 /* ContentView.swift in Sources */,
 				1177D5A02773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift in Sources */,
 				1177D5B52773DEA200A93281 /* Location.swift in Sources */,
+				1177D5BA2773E2F000A93281 /* LocationsView.swift in Sources */,
+				1177D5B82773E1EB00A93281 /* LocationViewModel.swift in Sources */,
 				1177D5AE2773DDEC00A93281 /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
