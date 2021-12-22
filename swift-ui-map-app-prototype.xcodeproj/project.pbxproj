@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		1177D5A02773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D59F2773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift */; };
 		1177D5A22773DDCF00A93281 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5A12773DDCF00A93281 /* ContentView.swift */; };
-		1177D5A42773DDD100A93281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177D5A32773DDD100A93281 /* Assets.xcassets */; };
 		1177D5A72773DDD100A93281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177D5A62773DDD100A93281 /* Preview Assets.xcassets */; };
+		1177D5AE2773DDEC00A93281 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5AD2773DDEC00A93281 /* LocationsDataService.swift */; };
+		1177D5B02773DDFB00A93281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177D5AF2773DDFB00A93281 /* Assets.xcassets */; };
+		1177D5B52773DEA200A93281 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1177D5B42773DEA200A93281 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1177D59C2773DDCF00A93281 /* swift-ui-map-app-prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-ui-map-app-prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1177D59F2773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_ui_map_app_prototypeApp.swift; sourceTree = "<group>"; };
 		1177D5A12773DDCF00A93281 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1177D5A32773DDD100A93281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1177D5A62773DDD100A93281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1177D5AD2773DDEC00A93281 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		1177D5AF2773DDFB00A93281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1177D5B42773DEA200A93281 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,13 @@
 		1177D59E2773DDCF00A93281 /* swift-ui-map-app-prototype */ = {
 			isa = PBXGroup;
 			children = (
+				1177D5B32773DE8100A93281 /* Models */,
+				1177D5B12773DE6700A93281 /* Views */,
+				1177D5B22773DE7200A93281 /* ViewModels */,
+				1177D5B62773DFCA00A93281 /* Services */,
 				1177D59F2773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift */,
 				1177D5A12773DDCF00A93281 /* ContentView.swift */,
-				1177D5A32773DDD100A93281 /* Assets.xcassets */,
+				1177D5AF2773DDFB00A93281 /* Assets.xcassets */,
 				1177D5A52773DDD100A93281 /* Preview Content */,
 			);
 			path = "swift-ui-map-app-prototype";
@@ -65,6 +73,36 @@
 				1177D5A62773DDD100A93281 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1177D5B12773DE6700A93281 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1177D5B22773DE7200A93281 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1177D5B32773DE8100A93281 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1177D5B42773DEA200A93281 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1177D5B62773DFCA00A93281 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1177D5AD2773DDEC00A93281 /* LocationsDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +163,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1177D5B02773DDFB00A93281 /* Assets.xcassets in Resources */,
 				1177D5A72773DDD100A93281 /* Preview Assets.xcassets in Resources */,
-				1177D5A42773DDD100A93281 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +177,8 @@
 			files = (
 				1177D5A22773DDCF00A93281 /* ContentView.swift in Sources */,
 				1177D5A02773DDCF00A93281 /* swift_ui_map_app_prototypeApp.swift in Sources */,
+				1177D5B52773DEA200A93281 /* Location.swift in Sources */,
+				1177D5AE2773DDEC00A93281 /* LocationsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

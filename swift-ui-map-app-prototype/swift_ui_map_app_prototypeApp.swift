@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct swift_ui_map_app_prototypeApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
