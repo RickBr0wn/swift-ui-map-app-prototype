@@ -13,7 +13,7 @@ struct LocationsView: View {
   
   var body: some View {
     ZStack {
-      Map(coordinateRegion: $vm.region)
+      map
         .ignoresSafeArea()
       
       VStack(spacing: 0.0) {
@@ -22,17 +22,11 @@ struct LocationsView: View {
         
         Spacer()
         
-        ZStack {
-          ForEach(vm.locations) { location in
-            if vm.location == location {
-              LocationsPreviewView(location: location)
-                .shadow(color: Color.black.opacity(0.3), radius: 20.0)
-                .padding()
-                .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
-            }
-          }
-        }
+        locationsPreviewStack
       }
+    }
+    .sheet(item: $vm.sheetLocation, onDismiss: nil) { location in
+      LocationsDetailView(location: location)
     }
   }
 }
@@ -68,7 +62,29 @@ extension LocationsView {
     .shadow(color: Color.black.opacity(0.3), radius: 20.0, x: 0.0, y: 15.0)
   }
   
+  private var map: some View {
+    Map(coordinateRegion: $vm.region, annotationItems: vm.locations, annotationContent: { location in
+      MapAnnotation(coordinate: location.coordinates) {
+        LocationsMapAnnotationView()
+          .scaleEffect(vm.location == location ? 1.0 : 0.7)
+          .shadow(radius: 10.0)
+          .onTapGesture { vm.showNextLocation(location: location) }
+      }
+    })
+  }
   
+  private var locationsPreviewStack: some View {
+    ZStack {
+      ForEach(vm.locations) { location in
+        if vm.location == location {
+          LocationsPreviewView(location: location)
+            .shadow(color: Color.black.opacity(0.3), radius: 20.0)
+            .padding()
+            .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+        }
+      }
+    }
+  }
 }
 
 struct LocationsView_Previews: PreviewProvider {

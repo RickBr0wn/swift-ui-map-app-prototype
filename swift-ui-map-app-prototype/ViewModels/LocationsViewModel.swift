@@ -20,9 +20,11 @@ class LocationsViewModel: ObservableObject {
   
   @Published var region: MKCoordinateRegion = MKCoordinateRegion()
   
-  private let defaultMapSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+  let defaultMapSpan: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
   
   @Published var showLocationsList: Bool = false
+  
+  @Published var sheetLocation: Location? = nil
   
   init() {
     self.locations = LocationsDataService.locations
@@ -31,21 +33,18 @@ class LocationsViewModel: ObservableObject {
   }
   
   private func updateMapRegion(location: Location) -> Void {
-    print("updateMapRegion fired! - \(location.name)")
     withAnimation(.easeInOut) {
       self.region = MKCoordinateRegion(center: location.coordinates, span: defaultMapSpan)
     }
   }
   
   func toggleLocationsList() -> Void {
-    print("toggleLocationsList fired!")
     withAnimation(.easeInOut) {
       self.showLocationsList = !self.showLocationsList
     }
   }
   
   func showNextLocation(location: Location) {
-    print("showNextLocation fired! - \(location.name)")
     withAnimation(.easeInOut) {
       self.location = location
       self.showLocationsList = false
